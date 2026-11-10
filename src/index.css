@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: "Plus Jakarta Sans", "Noto Sans Thai", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .font-mono-num {
+    font-family: "JetBrains Mono", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}

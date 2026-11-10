@@ -1,0 +1,6 @@
+{
+  "name": "TrainingPulse — ระบบประเมินความพึงพอใจการอบรม",
+  "description": "เว็บแอปเก็บความพึงพอใจของผู้เข้าร่วมอบรมและแสดงผลบน Dashboard แบบเรียลไทม์",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

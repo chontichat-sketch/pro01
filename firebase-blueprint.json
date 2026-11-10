@@ -1,0 +1,50 @@
+{
+  "entities": {
+    "SurveyResponse": {
+      "title": "SurveyResponse",
+      "description": "Anonymous training satisfaction survey response with 5 Likert-scale ratings (1-5) and optional feedback comment.",
+      "type": "object",
+      "properties": {
+        "q1": {
+          "type": "integer",
+          "description": "Rating for training content suitability (1-5)"
+        },
+        "q2": {
+          "type": "integer",
+          "description": "Rating for instructor knowledge and delivery (1-5)"
+        },
+        "q3": {
+          "type": "integer",
+          "description": "Rating for materials and equipment quality (1-5)"
+        },
+        "q4": {
+          "type": "integer",
+          "description": "Rating for training duration suitability (1-5)"
+        },
+        "q5": {
+          "type": "integer",
+          "description": "Rating for overall satisfaction (1-5)"
+        },
+        "comment": {
+          "type": "string",
+          "maxLength": 1000,
+          "description": "Optional feedback comment from participant"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the response was submitted"
+        }
+      },
+      "required": ["q1", "q2", "q3", "q4", "q5", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/responses/{responseId}": {
+      "schema": {
+        "$ref": "#/entities/SurveyResponse"
+      },
+      "description": "Public anonymous training survey responses"
+    }
+  }
+}
